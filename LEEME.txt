@@ -1,0 +1,21 @@
+STUDIO — Sitio web para proyecto escolar
+
+1. Abre index.html en tu navegador. Se incluyen HTML, CSS, JavaScript y las imágenes necesarias.
+2. Logotipo: Image/LOGO-transparente.png; el archivo LOGO.png original sigue incluido.
+3. Textos: abre index.html y modifica el contenido dentro de las etiquetas h1, h2, h3 y p.
+4. Contacto: en index.html cambia correo@ejemplo.com por tu correo real. No se ha inventado teléfono o dirección.
+5. Para añadir fotos al portafolio:
+   - Copia una nueva imagen a Image/.
+   - Abre index.html y busca el contenedor <div class="gallery" id="galeria">.
+   - Duplica este ejemplo dentro de la galería:
+
+     <figure class="gallery-card" data-category="retrato">
+       <img src="Image/mi-foto.jpg" alt="Descripción de la fotografía" loading="lazy">
+       <figcaption><strong>Nombre de la fotografía</strong><span>Fotografía de retrato</span></figcaption>
+     </figure>
+
+   - Cambia la ruta y la categoría (retrato, urbana o producto).
+   - Los botones de filtro trabajan automáticamente con data-category.
+6. Para añadir otra categoría: crea su botón data-filter, agrega las fotos con su data-category y, si deseas, una especialidad adicional.
+7. La galería contiene únicamente las dos imágenes ya presentes en tu ZIP; no se han inventado trabajos fotográficos.
+8. Se conservó la estética negra, gris y terracota de tu versión original y el fondo Foto/Fondo.png (ruta correcta: Image/Fondo.png).

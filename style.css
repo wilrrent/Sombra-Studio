@@ -1,0 +1,524 @@
+/* ================================================================= */
+/* 01. VARIABLES DE COLOR Y MEDIDAS */
+/* ================================================================= */
+
+:root {
+    --bg: #151414;
+    --surface: #201e1e;
+    --surface-dark: #111;
+    --text: #f9f7f5;
+    --muted: #c4baba;
+    --accent: #80524d;
+    --border: #38302f;
+    --header-h: 78px;
+}
+
+/* ================================================================= */
+/* 02. ESTILOS GENERALES */
+/* ================================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial,Helvetica,sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+/* ================================================================= */
+/* 03. ENCABEZADO Y NAVEGACIÃ“N */
+/* ================================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: #171717;
+    border-bottom: 1px solid #292727;
+}
+
+.nav-wrap {
+    height: var(--header-h);
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    height: 67px;
+    width: 90px;
+    flex: 0 0 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo img {
+    display: block;
+    width: 84px;
+    height: 64px;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px,3vw,42px);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: .88rem;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color .2s;
+}
+
+.navbar a:hover,.navbar a:focus-visible {
+    color: #d5a49e;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    color: white;
+    border: 1px solid #777;
+    border-radius: 4px;
+    padding: 5px 11px;
+    cursor: pointer;
+}
+
+/* ================================================================= */
+/* 04. PORTADA PRINCIPAL (HERO) */
+/* ================================================================= */
+
+.hero {
+    position: relative;
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 6%;
+    background: linear-gradient(90deg,rgba(0,0,0,.63),rgba(0,0,0,.45)),linear-gradient(0deg,rgba(0,0,0,.55),transparent 40%),url('Image/Fondo.png') center 35%/cover no-repeat;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+}
+
+.eyebrow {
+    display: block;
+    font-size: .74rem;
+    color: #dabcb8;
+    font-weight: 700;
+    letter-spacing: .21em;
+    margin-bottom: 19px;
+}
+
+h1,h2,h3,p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.9rem,6vw,5rem);
+    line-height: 1.12;
+    letter-spacing: -.05em;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #f0eded;
+    font-size: 1.1rem;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 11px 23px;
+    border: 1px solid var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: .92rem;
+    transition: background .2s,transform .2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #97635c;
+}
+
+.btn-outline {
+    background: #15141477;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: #80524d66;
+}
+
+/* ================================================================= */
+/* 05. ESTILOS COMPARTIDOS DE SECCIÃ“N */
+/* ================================================================= */
+
+.section {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    max-width: 760px;
+    margin: 0 auto 48px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    font-size: clamp(2.3rem,4vw,3.8rem);
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.section-heading p {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* ================================================================= */
+/* 06. SOBRE NOSOTROS */
+/* ================================================================= */
+
+.about {
+    background: var(--surface);
+}
+
+.features,.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 22px;
+    max-width: 1160px;
+    margin: auto;
+}
+
+.feature {
+    padding: 30px;
+    background: var(--surface-dark);
+    border: 1px solid #282525;
+}
+
+.feature-number {
+    color: #c79089;
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.feature h3,.service h3 {
+    font-size: 1.4rem;
+    margin: 13px 0 9px;
+}
+
+.feature p,.service p {
+    font-size: .98rem;
+    color: var(--muted);
+    margin: 0;
+}
+
+/* ================================================================= */
+/* 07. PORTAFOLIO Y GALERÃA */
+/* ================================================================= */
+
+.portfolio {
+    background: #151414;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.filter {
+    cursor: pointer;
+    padding: 8px 20px;
+    border: 1px solid #5a5050;
+    color: #ddd;
+    background: transparent;
+    border-radius: 100px;
+}
+
+.filter:hover,.filter.is-active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+
+.gallery {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 24px;
+}
+
+.gallery-card {
+    overflow: hidden;
+    position: relative;
+    background: #272323;
+    margin: 0;
+    min-height: 400px;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    transition: transform .35s;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.035);
+}
+
+.gallery-card figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 45px 22px 20px;
+    background: linear-gradient(transparent,rgba(0,0,0,.9));
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card figcaption strong {
+    font-size: 1.1rem;
+}
+
+.gallery-card figcaption span {
+    color: #ddd;
+    font-size: .88rem;
+}
+
+.gallery-card[hidden] {
+    display: none;
+}
+
+.empty-message {
+    text-align: center;
+    color: var(--muted);
+    margin: 36px 0;
+}
+
+.portfolio-note {
+    text-align: center;
+    color: #a99d9a;
+    font-size: .9rem;
+    margin: 25px 0 0;
+}
+
+/* ================================================================= */
+/* 08. ESPECIALIDADES Y SERVICIOS */
+/* ================================================================= */
+
+.services {
+    background: var(--surface);
+}
+
+.service {
+    padding: 27px;
+    border-top: 1px solid #685754;
+}
+
+.service>span {
+    color: #cf9d96;
+    font-size: .8rem;
+}
+
+.service a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #b88d86;
+    padding-bottom: 3px;
+    font-size: .92rem;
+}
+
+.service a:hover {
+    color: #edb9b1;
+}
+
+/* ================================================================= */
+/* 09. CONTACTO */
+/* ================================================================= */
+
+.contact {
+    text-align: center;
+    background: linear-gradient(rgba(14,12,12,.85),rgba(14,12,12,.88)),url('Image/Fondo.png') center 40%/cover no-repeat;
+}
+
+.contact .section-heading {
+    margin-bottom: 0;
+}
+
+.contact .btn {
+    margin-top: 26px;
+}
+
+.contact-hint {
+    font-size: .76rem!important;
+    color: #a99896!important;
+    margin-top: 18px;
+}
+
+/* ================================================================= */
+/* 10. PIE DE PÃGINA */
+/* ================================================================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 28px 6%;
+    background: #101010;
+    color: #b7acaa;
+    font-size: .82rem;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+/* ================================================================= */
+/* 11. ADAPTACIÃ“N PARA TABLET Y MÃ“VIL */
+/* ================================================================= */
+
+@media(max-width:800px) {
+    :root {
+        --header-h: 70px;
+    }
+    .nav-wrap {
+        padding: 0 5%;
+    }
+    .logo {
+        height: 60px;
+    }
+    .logo img {
+        height: 56px;
+        width: 78px;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    .navbar {
+        display: none;
+        position: absolute;
+        top: var(--header-h);
+        left: 0;
+        right: 0;
+        background: #171717;
+        padding: 15px 5% 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        border-bottom: 1px solid #333;
+    }
+    .navbar.is-open {
+        display: flex;
+    }
+    .navbar a {
+        padding: 12px 0;
+    }
+    .hero {
+        min-height: 610px;
+    }
+    .section {
+        padding: 74px 6%;
+    }
+    .features,.service-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .gallery-card {
+        min-height: 300px;
+    }
+    .gallery-card img {
+        height: 390px;
+    }
+}
+
+/* ================================================================= */
+/* 12. ADAPTACIÃ“N PARA PANTALLAS PEQUEÃ‘AS */
+/* ================================================================= */
+
+@media(max-width:480px) {
+    .hero {
+        min-height: 590px;
+        padding: 75px 6%;
+        background-position: center,center,center top;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .section-heading {
+        margin-bottom: 32px;
+    }
+    .gallery-card img {
+        height: 335px;
+    }
+    .footer {
+        flex-direction: column;
+    }
+}

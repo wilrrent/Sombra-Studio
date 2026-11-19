@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio — fotografía de retrato, producto y fotografía urbana. Portafolio creativo y contacto.">
+  <title>STUDIO | Estudio fotográfico</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <!-- El logo es una imagen real con dimensiones propias: no depende de un texto. -->
+      <a class="logo" href="#inicio" aria-label="STUDIO — ir al inicio">
+        <img src="Image/LOGO-transparente.png" alt="Logotipo STUDIO" width="88" height="88">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">☰</button>
+      <nav class="navbar" id="menu-principal" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#servicios">Especialidades</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="titulo-inicio">
+      <div class="hero-content">
+        <span class="eyebrow">SOMBRA STUDIO · PORTAFOLIO CREATIVO</span>
+        <h1 id="titulo-inicio">Historias que merecen ser vistas.</h1>
+        <p>Capturamos momentos, ideas y detalles con una mirada auténtica. Explora nuestro trabajo y descubre cómo transformamos una imagen en una historia.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#portafolio">Explorar portafolio</a>
+          <a class="btn btn-outline" href="#contacto">Hablemos de tu proyecto</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="nosotros" aria-labelledby="titulo-nosotros">
+      <div class="section-heading">
+        <span class="eyebrow">QUIÉNES SOMOS</span>
+        <h2 id="titulo-nosotros">Nuestra mirada</h2>
+        <p>STUDIO es un proyecto de fotografía dedicado a explorar la creatividad a través de la luz, la composición y la narrativa visual. Nos interesa encontrar belleza en los detalles y crear imágenes que comuniquen emociones e ideas.</p>
+      </div>
+      <div class="features">
+        <article class="feature"><span class="feature-number">01</span><h3>Creatividad</h3><p>Buscamos una perspectiva diferente para cada fotografía.</p></article>
+        <article class="feature"><span class="feature-number">02</span><h3>Composición</h3><p>Cuidamos los encuadres, los contrastes y cada detalle visual.</p></article>
+        <article class="feature"><span class="feature-number">03</span><h3>Identidad</h3><p>Construimos un estilo propio en cada proyecto.</p></article>
+      </div>
+    </section>
+
+    <section class="section portfolio" id="portafolio" aria-labelledby="titulo-portafolio">
+      <div class="section-heading">
+        <span class="eyebrow">TRABAJOS SELECCIONADOS</span>
+        <h2 id="titulo-portafolio">Portafolio</h2>
+        <p>Una colección en crecimiento. Selecciona una categoría para explorar nuestras fotografías.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar fotografías por categoría">
+        <button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Todas</button>
+        <button class="filter" type="button" data-filter="urbana" aria-pressed="false">Urbana</button>
+        <button class="filter" type="button" data-filter="producto" aria-pressed="false">Producto</button>
+        <button class="filter" type="button" data-filter="retrato" aria-pressed="false">Retrato</button>
+      </div>
+      <div class="gallery" id="galeria">
+        <figure class="gallery-card" data-category="urbana">
+          <img src="Image/Fondo.png" alt="Fotografía urbana en blanco y negro con flores y monumento" loading="lazy">
+          <figcaption><strong>Ciudad en contraste</strong><span>Fotografía urbana</span></figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="producto">
+          <img src="Image/header.png" alt="Fotografía de producto con fondo oscuro" loading="lazy">
+          <figcaption><strong>Estudio de producto</strong><span>Fotografía de producto</span></figcaption>
+        </figure>
+        <!-- PARA AÑADIR FOTOS: duplica un bloque <figure> y cambia src, alt, título y data-category.
+             Categorías válidas: urbana, producto, retrato. -->
+      </div>
+      <p class="empty-message" id="sin-resultados" hidden>Aún no hay fotografías publicadas en esta categoría. Próximamente agregaremos nuevos trabajos.</p>
+      <p class="portfolio-note">El portafolio seguirá creciendo con nuevas sesiones y trabajos del curso.</p>
+    </section>
+
+    <section class="section services" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTRAS ESPECIALIDADES</span>
+        <h2 id="titulo-servicios">Distintas formas de mirar</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service"><span>01 /</span><h3>Retrato</h3><p>Expresión, personalidad y emociones a través de la cámara.</p><a href="#portafolio" data-go-filter="retrato">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>02 /</span><h3>Producto</h3><p>Imágenes que destacan formas, texturas y detalles.</p><a href="#portafolio" data-go-filter="producto">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>03 /</span><h3>Urbana</h3><p>Arquitectura, calles y escenas cotidianas desde otra perspectiva.</p><a href="#portafolio" data-go-filter="urbana">Ver categoría <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="titulo-contacto">
+      <div class="section-heading">
+        <span class="eyebrow">CONTACTO</span>
+        <h2 id="titulo-contacto">¿Creamos algo juntos?</h2>
+        <p>Si te interesa nuestro trabajo o quieres conocer más sobre nuestros proyectos, ponte en contacto con el estudio.</p>
+        <!-- Sustituye correo@ejemplo.com por tu correo real antes de publicar. -->
+        <a class="btn btn-primary" href="mailto:correo@ejemplo.com?subject=Consulta%20desde%20STUDIO">Enviar correo</a>
+        <p class="contact-hint">Antes de publicar, reemplaza el correo de ejemplo por tu dirección real.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><span>STUDIO · Fotografía y narrativa visual</span><span>Proyecto académico · <span id="year">2026</span></span><a href="#inicio">Volver arriba ↑</a></footer>
+</body>
+</html>
+
