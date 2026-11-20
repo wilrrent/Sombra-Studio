@@ -43,7 +43,7 @@
       <div class="section-heading">
         <span class="eyebrow">QUIÉNES SOMOS</span>
         <h2 id="titulo-nosotros">Nuestra mirada</h2>
-        <p>STUDIO es un proyecto de fotografía dedicado a explorar la creatividad a través de la luz, la composición y la narrativa visual. Nos interesa encontrar belleza en los detalles y crear imágenes que comuniquen emociones e ideas.</p>
+        <p>Sombra Studio es un proyecto de fotografía dedicado a explorar la creatividad a través de la luz, la composición y la narrativa visual. Nos interesa encontrar belleza en los detalles y crear imágenes que comuniquen emociones e ideas.</p>
       </div>
       <div class="features">
         <article class="feature"><span class="feature-number">01</span><h3>Creatividad</h3><p>Buscamos una perspectiva diferente para cada fotografía.</p></article>
@@ -62,7 +62,8 @@
         <button class="filter is-active" type="button" data-filter="todos" aria-pressed="true">Todas</button>
         <button class="filter" type="button" data-filter="urbana" aria-pressed="false">Urbana</button>
         <button class="filter" type="button" data-filter="producto" aria-pressed="false">Producto</button>
-        <button class="filter" type="button" data-filter="retrato" aria-pressed="false">Retrato</button>
+        <button class="filter" type="button" data-filter="Comida" aria-pressed="false">Comida</button>
+        <button class="filter" type="button" data-filter="Packaging" aria-pressed="false">Packaging</button>
       </div>
       <div class="gallery" id="galeria">
         <figure class="gallery-card" data-category="urbana">
@@ -71,10 +72,30 @@
         </figure>
         <figure class="gallery-card" data-category="producto">
           <img src="Image/header.png" alt="Fotografía de producto con fondo oscuro" loading="lazy">
-          <figcaption><strong>Estudio de producto</strong><span>Fotografía de producto</span></figcaption>
+          <figcaption><strong>El arte del detalle</strong><span>Fotografía de producto</span></figcaption>
         </figure>
+        <figure class="gallery-card" data-category="producto">
+          <img src="Image/Mano1.jpg" alt="Fotografía de mano sosteniendo un producto con fondo oscuro" loading="lazy">
+          <figcaption><strong>Esencia de elegancia</strong><span>Fotografía de producto</span></figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="producto">
+          <img src="Image/Perfumes.jpg" alt="Fotografía de perfumes en fondo oscuro" loading="lazy">
+          <figcaption><strong>Identidad en cada esencia</strong><span>Fotografía de producto</span></figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="producto">
+          <img src="Image/Perfume.jpg" alt="Fotografía de perfumes en fondo oscuro" loading="lazy">
+          <figcaption><strong>Equilibrio y presencia</strong><span>Fotografía de producto</span></figcaption>
+        </figure>
+        <!-- <figure class="gallery-card" data-category="Comida">
+          <img src="Image/comida.png" alt="Fotografía de comida con colores vibrantes" loading="lazy">
+          <figcaption><strong>Delicia culinaria</strong><span>Fotografía de comida</span></figcaption>
+        </figure>
+        <figure class="gallery-card" data-category="Packaging">
+          <img src="Image/packaging.png" alt="Fotografía de empaque con diseño moderno" loading="lazy">
+          <figcaption><strong>Diseño de empaque</strong><span>Fotografía de packaging</span></figcaption>
+        </figure -->
         <!-- PARA AÑADIR FOTOS: duplica un bloque <figure> y cambia src, alt, título y data-category.
-             Categorías válidas: urbana, producto, retrato. -->
+             Categorías válidas: urbana, producto, Comida, Packaging. -->
       </div>
       <p class="empty-message" id="sin-resultados" hidden>Aún no hay fotografías publicadas en esta categoría. Próximamente agregaremos nuevos trabajos.</p>
       <p class="portfolio-note">El portafolio seguirá creciendo con nuevas sesiones y trabajos del curso.</p>
@@ -86,9 +107,10 @@
         <h2 id="titulo-servicios">Distintas formas de mirar</h2>
       </div>
       <div class="service-grid">
-        <article class="service"><span>01 /</span><h3>Retrato</h3><p>Expresión, personalidad y emociones a través de la cámara.</p><a href="#portafolio" data-go-filter="retrato">Ver categoría <span aria-hidden="true">↗</span></a></article>
-        <article class="service"><span>02 /</span><h3>Producto</h3><p>Imágenes que destacan formas, texturas y detalles.</p><a href="#portafolio" data-go-filter="producto">Ver categoría <span aria-hidden="true">↗</span></a></article>
-        <article class="service"><span>03 /</span><h3>Urbana</h3><p>Arquitectura, calles y escenas cotidianas desde otra perspectiva.</p><a href="#portafolio" data-go-filter="urbana">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>01 /</span><h3>Producto</h3><p>Imágenes que destacan formas, texturas y detalles.</p><a href="#portafolio" data-go-filter="producto">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>02 /</span><h3>Urbana</h3><p>Arquitectura, calles y escenas cotidianas desde otra perspectiva.</p><a href="#portafolio" data-go-filter="urbana">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>03 /</span><h3>Comida</h3><p>Imágenes que capturan la esencia y sabor de los platos.</p><a href="#portafolio" data-go-filter="Comida">Ver categoría <span aria-hidden="true">↗</span></a></article>
+        <article class="service"><span>04 /</span><h3>Packaging</h3><p>Imágenes que resaltan el diseño y la presentación de productos.</p><a href="#portafolio" data-go-filter="Packaging">Ver categoría <span aria-hidden="true">↗</span></a></article>
       </div>
     </section>
 
@@ -98,8 +120,8 @@
         <h2 id="titulo-contacto">¿Creamos algo juntos?</h2>
         <p>Si te interesa nuestro trabajo o quieres conocer más sobre nuestros proyectos, ponte en contacto con el estudio.</p>
         <!-- Sustituye correo@ejemplo.com por tu correo real antes de publicar. -->
-        <a class="btn btn-primary" href="mailto:correo@ejemplo.com?subject=Consulta%20desde%20STUDIO">Enviar correo</a>
-        <p class="contact-hint">Antes de publicar, reemplaza el correo de ejemplo por tu dirección real.</p>
+        <a class="btn btn-primary" href="mailto:wilrrent@gmail.com?subject=Consulta%20desde%20Sombra%20Studio">Enviar correo</a>
+        <p class="contact-hint">wilrrent@gmail.com</p>
       </div>
     </section>
   </main>

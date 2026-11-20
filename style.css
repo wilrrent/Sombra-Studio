@@ -1,16 +1,21 @@
 /* ================================================================= */
-/* 01. VARIABLES DE COLOR Y MEDIDAS */
+/* 01. IDENTIDAD VISUAL — SOMBRA STUDIO */
 /* ================================================================= */
 
 :root {
-    --bg: #151414;
-    --surface: #201e1e;
-    --surface-dark: #111;
-    --text: #f9f7f5;
-    --muted: #c4baba;
-    --accent: #80524d;
-    --border: #38302f;
+    --bg: #0c0f14;
+    --surface: #171c24;
+    --surface-dark: #11161d;
+    --text: #f5f7fa;
+    --muted: #adb9c8;
+    --accent: #92a8c2;
+    --border: #2c3644;
     --header-h: 78px;
+
+    /* Tonos adicionales: hielo y azul medianoche */
+    --accent-light: #c3d4e7;
+    --accent-dark: #172230;
+    --shadow: rgba(0, 0, 0, .28);
 }
 
 /* ================================================================= */
@@ -30,7 +35,7 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: Arial,Helvetica,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 
@@ -42,16 +47,22 @@ button {
     font: inherit;
 }
 
+/* Contraste y accesibilidad para enlaces y botones de teclado. */
+:where(a, button):focus-visible {
+    outline: 2px solid var(--accent-light);
+    outline-offset: 4px;
+}
+
 /* ================================================================= */
-/* 03. ENCABEZADO Y NAVEGACIÃ“N */
+/* 03. ENCABEZADO Y NAVEGACIÓN */
 /* ================================================================= */
 
 .site-header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: #171717;
-    border-bottom: 1px solid #292727;
+    background: #0d1118;
+    border-bottom: 1px solid var(--border);
 }
 
 .nav-wrap {
@@ -94,18 +105,18 @@ button {
     letter-spacing: .075em;
     text-transform: uppercase;
     white-space: nowrap;
-    transition: color .2s;
+    transition: color .2s ease;
 }
 
 .navbar a:hover,.navbar a:focus-visible {
-    color: #d5a49e;
+    color: #b7cce6;
 }
 
 .menu-toggle {
     display: none;
     background: none;
     color: white;
-    border: 1px solid #777;
+    border: 1px solid #6c798b;
     border-radius: 4px;
     padding: 5px 11px;
     cursor: pointer;
@@ -123,7 +134,9 @@ button {
     justify-content: center;
     text-align: center;
     padding: 100px 6%;
-    background: linear-gradient(90deg,rgba(0,0,0,.63),rgba(0,0,0,.45)),linear-gradient(0deg,rgba(0,0,0,.55),transparent 40%),url('Image/Fondo.png') center 35%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(5, 9, 16, .76), rgba(7, 12, 20, .52)),
+                linear-gradient(0deg, rgba(5, 9, 16, .76), transparent 48%),
+                url('Image/Fondo.png') center 35% / cover no-repeat;
 }
 
 .hero-content {
@@ -134,7 +147,7 @@ button {
 .eyebrow {
     display: block;
     font-size: .74rem;
-    color: #dabcb8;
+    color: #bbcee3;
     font-weight: 700;
     letter-spacing: .21em;
     margin-bottom: 19px;
@@ -154,7 +167,7 @@ h1 {
 .hero p {
     max-width: 700px;
     margin: 0 auto 30px;
-    color: #f0eded;
+    color: #e7edf5;
     font-size: 1.1rem;
 }
 
@@ -172,10 +185,11 @@ h1 {
     min-height: 48px;
     padding: 11px 23px;
     border: 1px solid var(--accent);
+    border-radius: 3px;
     text-decoration: none;
     font-weight: 700;
     font-size: .92rem;
-    transition: background .2s,transform .2s;
+    transition: background .2s, transform .2s, border-color .2s;
 }
 
 .btn:hover {
@@ -184,24 +198,24 @@ h1 {
 
 .btn-primary {
     background: var(--accent);
-    color: white;
+    color: #0a1119;
 }
 
 .btn-primary:hover {
-    background: #97635c;
+    background: #b1c5db;
 }
 
 .btn-outline {
-    background: #15141477;
+    background: rgba(8, 13, 21, .46);
     color: white;
 }
 
 .btn-outline:hover {
-    background: #80524d66;
+    background: rgba(146, 168, 194, .16);
 }
 
 /* ================================================================= */
-/* 05. ESTILOS COMPARTIDOS DE SECCIÃ“N */
+/* 05. ESTILOS COMPARTIDOS DE SECCIÓN */
 /* ================================================================= */
 
 .section {
@@ -246,11 +260,18 @@ h1 {
 .feature {
     padding: 30px;
     background: var(--surface-dark);
-    border: 1px solid #282525;
+    border: 1px solid var(--border);
+    box-shadow: 0 14px 28px var(--shadow);
+    transition: border-color .25s ease, transform .25s ease;
+}
+
+.feature:hover {
+    border-color: #52677f;
+    transform: translateY(-3px);
 }
 
 .feature-number {
-    color: #c79089;
+    color: #99b2d0;
     font-weight: 700;
     font-size: .8rem;
 }
@@ -267,11 +288,11 @@ h1 {
 }
 
 /* ================================================================= */
-/* 07. PORTAFOLIO Y GALERÃA */
+/* 07. PORTAFOLIO Y GALERÍA FOTOGRÁFICA */
 /* ================================================================= */
 
 .portfolio {
-    background: #151414;
+    background: var(--bg);
 }
 
 .filters {
@@ -285,15 +306,15 @@ h1 {
 .filter {
     cursor: pointer;
     padding: 8px 20px;
-    border: 1px solid #5a5050;
-    color: #ddd;
+    border: 1px solid #546274;
+    color: #e0e7f0;
     background: transparent;
     border-radius: 100px;
 }
 
 .filter:hover,.filter.is-active {
     background: var(--accent);
-    color: #fff;
+    color: #0a1119;
     border-color: var(--accent);
 }
 
@@ -308,9 +329,15 @@ h1 {
 .gallery-card {
     overflow: hidden;
     position: relative;
-    background: #272323;
+    background: #151c26;
     margin: 0;
     min-height: 400px;
+    border: 1px solid #263346;
+    transition: border-color .25s ease;
+}
+
+.gallery-card:hover {
+    border-color: #6882a0;
 }
 
 .gallery-card img {
@@ -341,7 +368,7 @@ h1 {
 }
 
 .gallery-card figcaption span {
-    color: #ddd;
+    color: #e0e7f0;
     font-size: .88rem;
 }
 
@@ -357,7 +384,7 @@ h1 {
 
 .portfolio-note {
     text-align: center;
-    color: #a99d9a;
+    color: #96a7bb;
     font-size: .9rem;
     margin: 25px 0 0;
 }
@@ -372,11 +399,11 @@ h1 {
 
 .service {
     padding: 27px;
-    border-top: 1px solid #685754;
+    border-top: 1px solid #415064;
 }
 
 .service>span {
-    color: #cf9d96;
+    color: #9db9d9;
     font-size: .8rem;
 }
 
@@ -384,13 +411,13 @@ h1 {
     display: inline-block;
     margin-top: 20px;
     text-decoration: none;
-    border-bottom: 1px solid #b88d86;
+    border-bottom: 1px solid #879fb9;
     padding-bottom: 3px;
     font-size: .92rem;
 }
 
 .service a:hover {
-    color: #edb9b1;
+    color: #c6dcf2;
 }
 
 /* ================================================================= */
@@ -399,7 +426,8 @@ h1 {
 
 .contact {
     text-align: center;
-    background: linear-gradient(rgba(14,12,12,.85),rgba(14,12,12,.88)),url('Image/Fondo.png') center 40%/cover no-repeat;
+    background: linear-gradient(rgba(7, 11, 18, .89), rgba(7, 11, 18, .92)),
+                url('Image/Fondo.png') center 40% / cover no-repeat;
 }
 
 .contact .section-heading {
@@ -412,12 +440,12 @@ h1 {
 
 .contact-hint {
     font-size: .76rem!important;
-    color: #a99896!important;
+    color: #a4b2c3 !important;
     margin-top: 18px;
 }
 
 /* ================================================================= */
-/* 10. PIE DE PÃGINA */
+/* 10. PIE DE PÁGINA */
 /* ================================================================= */
 
 .footer {
@@ -426,8 +454,8 @@ h1 {
     gap: 16px;
     flex-wrap: wrap;
     padding: 28px 6%;
-    background: #101010;
-    color: #b7acaa;
+    background: #080b10;
+    color: #a9b7c9;
     font-size: .82rem;
 }
 
@@ -436,7 +464,7 @@ h1 {
 }
 
 /* ================================================================= */
-/* 11. ADAPTACIÃ“N PARA TABLET Y MÃ“VIL */
+/* 11. ADAPTACIÓN PARA TABLET Y MÓVIL */
 /* ================================================================= */
 
 @media(max-width:800px) {
@@ -462,12 +490,12 @@ h1 {
         top: var(--header-h);
         left: 0;
         right: 0;
-        background: #171717;
+        background: #0d1118;
         padding: 15px 5% 25px;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid var(--border);
     }
     .navbar.is-open {
         display: flex;
@@ -496,7 +524,7 @@ h1 {
 }
 
 /* ================================================================= */
-/* 12. ADAPTACIÃ“N PARA PANTALLAS PEQUEÃ‘AS */
+/* 12. ADAPTACIÓN PARA PANTALLAS PEQUEÑAS */
 /* ================================================================= */
 
 @media(max-width:480px) {
